@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-$mydb = new mysqli('25.3.221.199','kevin','cdkt','CDKTTechnologies');
+$mydb = new mysqli('127.0.0.1','kevin','cdkt','CDKTTechnologies');
 
 if ($mydb->errno != 0)
 {
@@ -27,4 +27,3 @@ while ($row = mysqli_fetch_array($response)){
 }
 
 ?>
-
