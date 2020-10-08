@@ -4,10 +4,10 @@
     require_once('get_host_info.inc');
     require_once('rabbitMQLib.inc');
 	
-    function ErrorHandler($e, $fileName){
+    function ErrorHandler($err, $fileName){
         $myfile = fopen( $fileName . '.txt', "a" ) or die ("Unable to open file");
-        for ($i = 0; $i < count($e); $i++){
-          fwrite( $myfile, $e[$i] );
+        for ($i = 0; $i < count($err); $i++){
+          fwrite( $myfile, $err[$i] );
         }
 		return true;
     }
@@ -22,21 +22,21 @@
             return array('message'=>"ERROR: unsupported message type");
         }
         switch($request['type']){
-            case "frontend":
+            case "frontEnd":
                 echo "frontend webserver";
-                $response_msg = ErrorHandler($request['error_string'], 'frontend');
+                $response_msg = ErrorHandler($request['error_string'], 'frontEnd');
 		echo "Result: " .$response_msg;
 		break;
-            case "backend": 
+            case "backEnd": 
                 echo "Backend Database" ;
-                $response_msg = ErrorHandler($request['error_string'], 'backend');
+                $response_msg = ErrorHandler($request['error_string'], 'backEnd');
                 echo "Result: " . $response_msg;
                 break;
         }
         echo $response_msg;
         return $response_msg;
     }
-    $server = new rabbitMQServer('testRabbitMQ.ini', 'testServer');
+    $server = new rabbitMQServer('errorListener.ini', 'testServer');
     $server->process_requests('requestProcessor');
    exit();
    fclose($myfile);
