@@ -10,6 +10,7 @@
     require_once('get_host_info.inc');
     require_once('rabbitMQLib.inc');
     require_once('testRabbitMQ.ini');
+
     $myfile = fopen("/home/tashid/git/log/errorLog.txt","r");
     $err_Array = [];
     while(! feof($myfile)){
