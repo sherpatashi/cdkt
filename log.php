@@ -15,6 +15,7 @@ function logErrors( $error_number, $error_string, $filename, $line_number )
 	echo $today . "<br>";
 	echo $time . "<br>";
 
+	
 $today = date("m-Y-d");
 $time =  date("h:i:sa");
 $myfile = "logs";
@@ -25,21 +26,24 @@ file_put_contents("log/" . $myfile . ".txt", $file, FILE_APPEND);
 }
 set_error_handler("logErrors");
 
-//this function check the responds.
-function if_responds($message){
 
+//this function check the responds.
+function if_responds($message)
+{
 $message = strtolower($message);
-  if (preg_match('/successfully/',$message) | preg_match('/failed/',$message) )
+  if (preg_match('/successfully/',$message) | preg_match('/failed/',$message))
   {
-    return True;
+   	 return True;
   }
-  return false;
+  	return false;
 }
 // this line send log to server
-if (if_responds($message){
-$client = new rabbitMQClient("errorListener.ini","testServer");
-    $client->publish($message);	
+if (if_responds($message)
+{
+	$client = new rabbitMQClient("errorListener.ini","testServer");
+    	$client->publish($message);	
 }
+
 error_log($message.PHP_EOL,3,"home/tashid/changeRabbit/log/logs.txt");
 ?>
 
