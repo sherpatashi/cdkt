@@ -4,18 +4,20 @@
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
-	
+
 //this function log errrors.
-function logErrors( $error_number, $error_string, $filename, $line_number )
+function logErrors( $error_level, $error_message, $filename, $line_number )
 {
 	
-$today = date("m-Y-d");
+$today = date("m/Y/d");
 $time =  date("h:i:sa");
 $myfile = "logs";
-$file = " [" . $today . " | " . $time . "]  " . $error_number ." :" . $error_string . " in " . $filename . " at line " . $line_number . "\n";
 
-file_put_contents("log/" . $myfile . ".txt", $file, FILE_APPEND);
+$file = " [" . $today . " | " . $time . "]  " . "Error ". $error_level ." :" . $error_message . " in " . $filename . " at line " . $line_number . "\r\n";
 
+file_put_contents("log/" . $myfile . ".txt", $file, FILE_APPEND );
+
+}
+set_error_handler("logErrors");
 
 ?>
-
