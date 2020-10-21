@@ -1,33 +1,31 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="auto, initial-scale=1">
 <style>
 
- .center {
+.center {
   margin: auto;
-  width: 100%;
-  border: 3px solid #73AD21;
+  width: 50%;
   padding: 10px;
 }
+
 <div class="center">
-  
-  
+
 div {
   background-color: lightgrey;
-  width: 100%;
-  border: 100% ;
+  width: 80%;
+  border: 50% ;
   padding: 50px;
-  margin: 20px;
+  margin: 10px;
   align: center;
   }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: cyan;
-
-
+  background-color: white;
 }
+
 
 * {
   box-sizing: border-box;
@@ -37,17 +35,17 @@ body {
 /* Add padding to containers */
 .container {
   padding: 20px;
-  background-color: lightcyan;
+  background-color: #BAFFE1;
 }
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-  width: 100%;
-  padding: 16px;
+  width: 70%;
+  padding: 10px;
   margin: 4px 0 20px 0;
   display: inline-block;
   border: none;
-  background: #ffffe6;
+  background: white;
 }
 
 input[type=text]:focus, input[type=password]:focus {
@@ -55,94 +53,125 @@ input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 
-/* Overwrite default styles of hr */
+/* Overwrite default styles of hr 
 hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 20px;
+  border: 2px solid #000047;
+  margin-bottom: 10px;
 }
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 20px;
-}
+*/
 
 
-/* Set a style for the submit button */
+/* Set a style for the login button */
+
 .loginbtn {
-  background-color: #4CAF50;
+  background-color: green;
+  border-radius: 10px;
   color: white;
   padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
+  margin: auto;
+  text-align: center;
+  border: spotted;
+  transition: all 0.5s;
   cursor: pointer;
-  width: 100%;
+  width: 70%;
   opacity: 0.9;
   }
   
-  .loginbtn:hover {
+.loginbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.loginbtn:hover span {
+  padding-right: 25px;
+}
+
+.loginbtn:hover span:after {
   opacity: 1;
+  right: 0;
   }
   
+/* Set a style for the Register button */
 .registerbtn {
-  background-color: #4CAF50;
+  background-color: green;
+  border-radius: 10px;
   color: white;
   padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
+  margin: auto;
+  text-align: center;
+  border: spotted;
+  transition: all 0.5s;
   cursor: pointer;
-  width: 100%;
+  width: 70%;
   opacity: 0.9;
+  }
+  
+.registerbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-.registerbtn:hover {
+.registerbtn:hover span {
+  padding-right: 25px;
+}
+
+  
+.registerbtn:hover span:after {
   opacity: 1;
-}
-
-
+  right: 0;
+  }
+  
+ </div>
 </style>
 </head>
 <body>
+<div class="center">
 
 <form action="./php/testClient.php">
-
 <div class="container">
+    
     <h1>Login</h1>
+    
     <p>Please enter your username and password to login.</p>
-    <hr>
-
-    <label for="username"><b>Username</b></label>
-    <input type="text" placeholder=" Enter Username" name="username" id="username" required>
-
+    <hr style="text-align:left; margin-left:0">
+    <label for="username"><b>Username</b></label> 
+    <input type="text" placeholder=" Enter Username" name="username" id="username" required> <br>
     <label for="password"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" id="password" required>
-    <button type="submit" class="loginbtn">Login</button>
+    <button type="submit" class="loginbtn" style="vertical-align:middle"><span>Login </span></button>
     
 </div>
 </form>
 
+<hr style="width:100%;text-align:left; margin-left:0">
 
 <form action="./php/authenticationRabbitMQClient.php">
   <div class="container">
     <h1>Register</h1>
-    <p>Please fill in this form to create an account.</p>
+    <p>Please fill in this form to create a new account.</p>
     <hr>
     
-    <label for="text"><b>Last Name</b></label>
-    <input type="text" placeholder="Enter Last Name" name="" id="email" required>
+    <label for="text"><b>Last Name</b></label> 
+    <input type="text" placeholder="Enter Last Name" name="lastname" id="lastname" required> <br>
     
-    <label for="text"><b>First Name</b></label>
-    <input type="text" placeholder="Enter First Name" name="email" id="email" required>
+    <label for="text"><b>First Name</b></label> 
+    <input type="text" placeholder="Enter First Name" name="firstname" id="firstname" required><br>
     
     <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" id="username" required>
+    <input type="text" placeholder="Enter Username" name="username" id="username" required><br>
 
-    <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="passwd" id="passwd" required>
+    <label for="password"><b>Password</b></label> 
+    <input type="password" placeholder="Enter Password" name="passwd" id="passwd" required><br>
     
-    <button type="submit" class="registerbtn">Register</button>
-  </div>
-   </div>
-</form>
+    <button type="submit" class="registerbtn" style="vertical-align:middle"><span>Register </span></button>
 
+  </div>
+  </div>
+  </div>
+</form>
 </body>
 </html>
