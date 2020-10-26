@@ -1,4 +1,9 @@
 #!/usr/bin/php
+
+require_once('path.inc');
+require_once('get_host_info.inc');
+require_once('rabbitMQLib.inc');
+
 	//Error logging system.
 function logErrors($error_level, $error_message, $filename, $line_number){
   	date_default_timezone_set('America/New_York');
