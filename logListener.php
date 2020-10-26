@@ -35,7 +35,7 @@ switch ($request['type']){
 	return $msg;
 }
 //creating a new server
-$server = new rabbitMQServer('RMQ.ini', 'logServer');
+$server = new rabbitMQServer('logRMQ.ini', 'logServer');
 //processes the request sent by client
 $server->process_requests('requestProcessor');
    
