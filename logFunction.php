@@ -1,10 +1,11 @@
 #!/usr/bin/php
+	//Error logging system.
 function logErrors($error_level, $error_message, $filename, $line_number){
   	date_default_timezone_set('America/New_York');
 	$time = date("M/d/Y | h:i:sa");
 	$file  = "[$time]  $error_level in $filename at line $line_number. \n";
 
-  $client = new rabbitMQClient("logRMQ.ini","logServer");
+ 	 $client = new rabbitMQClient("logRMQ.ini","logServer");
 	$request = array();
 	$request['type'] = "log-error";
   	$request['message'] = $file;
@@ -15,7 +16,7 @@ function logErrors($error_level, $error_message, $filename, $line_number){
 }
 set_error_handler("logErrors");
 	
-// Login logging system.
+	// Login logging system.
 function LogLogin($log){
   	date_default_timezone_set('America/New_York');
 	$time = date("M/d/Y | h:i:sa");
@@ -31,7 +32,7 @@ function LogLogin($log){
   	return $reponse;
 }
 
-//registration loggin system.
+	//registration loggin system.
 function LogRegister($log){
   	date_default_timezone_set('America/New_York');
 	$time = date("M/d/Y | h:i:sa");
@@ -47,7 +48,7 @@ function LogRegister($log){
   	return $reponse; 
 }
   
-  //SQL logging system.
+ 	//SQL logging system.
 function logSQL($log){
   	date_default_timezone_set('America/New_York');
 	$time = date("M/d/Y | h:i:sa");
