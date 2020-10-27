@@ -28,14 +28,16 @@ function requestProcessor($request){
 switch ($request['type']){
 	case "log-error":
       		$msg =  logErrors($request['message'], "logError");
-		
+		break;
     	case "log-login":
 		$msg = storeLogs($request['message'], "logLogin");
-		
+		break;
 	case "log-register":
 		$msg =  logRegister($request['message'], "logRegister");
+		break;
     	case "log-SQL":
       		$msg =  logSQL($request['message'], "logSQL");
+		break;
 	}
 	return $msg;
 }
