@@ -31,7 +31,7 @@ set_error_handler("logErrors");
 function LogLogin($log){
   	date_default_timezone_set('America/New_York');
 	$time = date("M/d/Y | h:i:sa");
-  	$file  = "[$time]  $log \n";
+  	$file  = "[$time]  $log ";
 
   	$client = new rabbitMQClient("logRMQ.ini","logServer");
 	$request = array();
@@ -47,7 +47,7 @@ function LogLogin($log){
 function LogRegister($log){
   	date_default_timezone_set('America/New_York');
 	$time = date("M/d/Y | h:i:sa");
-  	$file  = "[$time]  $log \n";
+  	$file  = "[$time]  $log ";
   
   	$client = new rabbitMQClient("logRMQ.ini","logServer");
 	$request = array();
@@ -63,7 +63,7 @@ function LogRegister($log){
 function logSQL($log){
   date_default_timezone_set('America/New_York');
 	$time = date("M/d/Y | h:i:sa");
-  $file  = "[$time]  $log \n";
+  $file  = "[$time]  $log ";
   
   $client = new rabbitMQClient("logRMQ.ini","logServer");
 	$request = array();
