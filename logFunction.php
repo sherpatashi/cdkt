@@ -58,5 +58,21 @@ function LogRegister($log){
 	#$response = $client->publish($request);
   	return $reponse; 
 }
+
+//SQL logging system.
+function logSQL($log){
+  date_default_timezone_set('America/New_York');
+	$time = date("M/d/Y | h:i:sa");
+  $file  = "[$time]  $log \n";
   
+  $client = new rabbitMQClient("logRMQ.ini","logServer");
+	$request = array();
+	$request['type'] = "log-SQL";
+  $request['message'] = $file;
+
+	$response = $client->send_request($request);
+	#$response = $client->publish($request);
+  return $reponse; 
+}
+
 ?>
