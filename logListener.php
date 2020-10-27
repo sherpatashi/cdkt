@@ -6,10 +6,15 @@ require_once('rabbitMQLib.inc');
 
      // creates file and store logs.
 function storeLogs($message, $fileName){
-	$fp = fopen( $fileName . '.log', "a" );
-        fwrite( $fp, $message);
-        fclose($fp);
-       	return true;
+$dir="logs";
+if (!file_exists($dir)) {
+  if(!mkdir($dir, 0777, true)){} 
+}
+ $file = fopen("./logs/$fileName" . '.log', 'a' );
+          fwrite( $file, $message);
+          fclose($file);
+          return true;
+    
 }
 //route the request from client.
 function requestProcessor($request){
