@@ -4,11 +4,11 @@ require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
 
-     // creates file and store logs.
+     // creates directory and store logs.
 function storeLogs($message, $fileName){
 $dir="logs";
-if (!file_exists($dir)) {
-  if(!mkdir($dir, 0777, true)){} 
+if (!file_exists($dir)){
+	mkdir($dir, 0777, true); 
 }
  $file = fopen("./logs/$fileName" . '.log', 'a' );
           fwrite( $file, $message);
