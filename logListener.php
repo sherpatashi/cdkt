@@ -1,21 +1,17 @@
+
 #!/usr/bin/php
 <?php
 require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
 
-     // creates directory and store logs.
+// creates new file  and store logs.
 function storeLogs($message, $fileName){
-$dir="logs";
-if (!file_exists($dir)){
-	mkdir($dir, 0777, true); 
-}
- $file = fopen("./logs/$fileName" . '.log', 'a' );
-          fwrite( $file, $message);
-          fclose($file);
-          return true;
-    
-}
+	$file = fopen("./logs/$fileName" . '.log', 'a' );
+        fwrite( $file, $message);
+	fclose($file);
+	}
+
 //route the request from client.
 function requestProcessor($request){
   	echo "Received Request:\n\n";
@@ -27,25 +23,29 @@ function requestProcessor($request){
 
 switch ($request['type']){
 	case "log-error":
-      		$msg =  logErrors($request['message'], "logError");
+      		 return storeLogs($request['message'], "Errors");
 		break;
     	case "log-login":
-		$msg = storeLogs($request['message'], "logLogin");
+		return storeLogs($request['message'], "Login");
 		break;
 	case "log-register":
-		$msg =  logRegister($request['message'], "logRegister");
+		return  storeLogs($request['message'], "Register");
 		break;
     	case "log-SQL":
-      		$msg =  logSQL($request['message'], "logSQL");
+      		return storeLogs($request['message'], "SQL");
 		break;
-	}
-	return $msg;
+	case "log-DMZ":
+      		 return storeLogs($request['message'], "DMZ");
+		break;
+	}	
+
 }
-//creating a new server
-$server = new rabbitMQServer('logRMQ.ini', 'logServer');
+//creating a new serverr
+$server = new rabbitMQServer('testRabbitMQ.ini', 'logServer');
 //processes the request sent by client
 $server->process_requests('requestProcessor');
    
-
-
 ?>
+
+
+
