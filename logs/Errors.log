@@ -1,0 +1,76 @@
+[Oct/31/2020 | 10:07:14am] Error: 2, mysqli::__construct(): (HY000/1045): Access denied for user 'kevin'@'localhost' (using password: YES) in /var/www/html/php/testRabbitMQServer.php at line 128. 
+[Oct/31/2020 | 10:07:14am] Error: 2, mysqli::__construct(): (HY000/1045): Access denied for user 'kevin'@'localhost' (using password: YES) in /var/www/html/php/testRabbitMQServer.php at line 128. 
+[Oct/31/2020 | 10:07:14am] Error: 2, doLogin(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 22. 
+[Oct/31/2020 | 10:07:14am] Error: 2, doLogin(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 22. 
+[Oct/31/2020 | 10:07:14am] Error: 2, mysqli::query(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 33. 
+[Oct/31/2020 | 10:07:14am] Error: 2, mysqli::query(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 33. 
+[Oct/31/2020 | 10:07:14am] Error: 2, mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/php/testRabbitMQServer.php at line 34. 
+[Oct/31/2020 | 10:07:14am] Error: 2, mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/php/testRabbitMQServer.php at line 34. 
+[Oct/31/2020 | 10:07:14am] Error: 8, Trying to get property 'num_rows' of non-object in /var/www/html/php/testRabbitMQServer.php at line 38. 
+[Oct/31/2020 | 10:07:14am] Error: 8, Trying to get property 'num_rows' of non-object in /var/www/html/php/testRabbitMQServer.php at line 38. 
+[Oct/31/2020 | 10:16:10am] Error: 2, mysqli::__construct(): (HY000/1045): Access denied for user 'kevin'@'localhost' (using password: YES) in /var/www/html/php/testRabbitMQServer.php at line 128. 
+[Oct/31/2020 | 10:16:10am] Error: 2, mysqli::__construct(): (HY000/1045): Access denied for user 'kevin'@'localhost' (using password: YES) in /var/www/html/php/testRabbitMQServer.php at line 128. 
+[Oct/31/2020 | 10:16:10am] Error: 2, doLogin(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 22. 
+[Oct/31/2020 | 10:16:10am] Error: 2, doLogin(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 22. 
+[Oct/31/2020 | 10:16:11am] Error: 2, mysqli::query(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 33. 
+[Oct/31/2020 | 10:16:11am] Error: 2, mysqli::query(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 33. 
+[Oct/31/2020 | 10:16:11am] Error: 2, mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/php/testRabbitMQServer.php at line 34. 
+[Oct/31/2020 | 10:16:11am] Error: 2, mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/php/testRabbitMQServer.php at line 34. 
+[Oct/31/2020 | 10:16:11am] Error: 8, Trying to get property 'num_rows' of non-object in /var/www/html/php/testRabbitMQServer.php at line 38. 
+[Oct/31/2020 | 10:16:11am] Error: 8, Trying to get property 'num_rows' of non-object in /var/www/html/php/testRabbitMQServer.php at line 38. 
+[[[[[[[[[[[Oct/31/2020 | 11:14:29am] Error: 2, doLogin(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 22. 
+[Oct/31/2020 | 11:14:29am] Error: 2, doLogin(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 22. 
+[Oct/31/2020 | 11:14:29am] Error: 2, mysqli::query(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 33. 
+[Oct/31/2020 | 11:14:29am] Error: 2, mysqli::query(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 33. 
+[Oct/31/2020 | 11:14:29am] Error: 2, mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/php/testRabbitMQServer.php at line 34. 
+[Oct/31/2020 | 11:14:29am] Error: 2, mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/php/testRabbitMQServer.php at line 34. 
+[Oct/31/2020 | 11:14:29am] Error: 8, Trying to get property 'num_rows' of non-object in /var/www/html/php/testRabbitMQServer.php at line 38. 
+[Oct/31/2020 | 11:14:29am] Error: 8, Trying to get property 'num_rows' of non-object in /var/www/html/php/testRabbitMQServer.php at line 38. 
+[Nov/01/2020 | 05:57:53pm] Error: 2, mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/php/testRabbitMQServer.php at line 34. 
+[Nov/01/2020 | 05:57:53pm] Error: 2, mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/php/testRabbitMQServer.php at line 34. 
+[Nov/01/2020 | 05:57:53pm] Error: 8, Trying to get property 'num_rows' of non-object in /var/www/html/php/testRabbitMQServer.php at line 38. 
+[Nov/01/2020 | 05:57:53pm] Error: 8, Trying to get property 'num_rows' of non-object in /var/www/html/php/testRabbitMQServer.php at line 38. 
+[Nov/01/2020 | 06:06:00pm] Error: 2, doLogin(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 22. 
+[Nov/01/2020 | 06:06:00pm] Error: 2, doLogin(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 22. 
+[Nov/01/2020 | 06:06:00pm] Error: 2, mysqli::query(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 33. 
+[Nov/01/2020 | 06:06:00pm] Error: 2, mysqli::query(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 33. 
+[Nov/01/2020 | 06:06:00pm] Error: 2, mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/php/testRabbitMQServer.php at line 34. 
+[Nov/01/2020 | 06:06:00pm] Error: 2, mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/php/testRabbitMQServer.php at line 34. 
+[Nov/01/2020 | 06:06:00pm] Error: 8, Trying to get property 'num_rows' of non-object in /var/www/html/php/testRabbitMQServer.php at line 38. 
+[Nov/01/2020 | 06:06:00pm] Error: 8, Trying to get property 'num_rows' of non-object in /var/www/html/php/testRabbitMQServer.php at line 38. 
+[Nov/01/2020 | 06:11:15pm] Error: 2, doLogin(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 22. 
+[Nov/01/2020 | 06:11:15pm] Error: 2, doLogin(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 22. 
+[Nov/01/2020 | 06:11:15pm] Error: 2, mysqli::query(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 33. 
+[Nov/01/2020 | 06:11:15pm] Error: 2, mysqli::query(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 33. 
+[Nov/01/2020 | 06:11:15pm] Error: 2, mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/php/testRabbitMQServer.php at line 34. 
+[Nov/01/2020 | 06:11:15pm] Error: 2, mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /var/www/html/php/testRabbitMQServer.php at line 34. 
+[Nov/01/2020 | 06:11:15pm] Error: 8, Trying to get property 'num_rows' of non-object in /var/www/html/php/testRabbitMQServer.php at line 38. 
+[Nov/01/2020 | 06:11:15pm] Error: 8, Trying to get property 'num_rows' of non-object in /var/www/html/php/testRabbitMQServer.php at line 38. 
+[Nov/01/2020 | 06:22:21pm] Error: 2, mysqli::__construct(): (HY000/1045): Access denied for user 'kevin'@'localhost' (using password: YES) in /var/www/html/php/testRabbitMQServer.php at line 128. 
+[Nov/01/2020 | 06:22:21pm] Error: 2, mysqli::__construct(): (HY000/1045): Access denied for user 'kevin'@'localhost' (using password: YES) in /var/www/html/php/testRabbitMQServer.php at line 128. 
+[Nov/01/2020 | 05:57:53pm] Error: 2, mysqli::__construct(): (HY000/1045): Access denied for user 'kevin'@'localhost' (using password: YES) in /var/www/html/php/testRabbitMQServer.php at line 128. 
+[Nov/01/2020 | 05:57:53pm] Error: 2, mysqli::__construct(): (HY000/1045): Access denied for user 'kevin'@'localhost' (using password: YES) in /var/www/html/php/testRabbitMQServer.php at line 128. 
+[Nov/01/2020 | 05:57:53pm] Error: 2, doLogin(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 22. 
+[Nov/01/2020 | 05:57:53pm] Error: 2, doLogin(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 22. 
+[Nov/01/2020 | 05:57:53pm] Error: 2, mysqli::query(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 33. 
+[Nov/01/2020 | 05:57:53pm] Error: 2, mysqli::query(): Couldn't fetch mysqli in /var/www/html/php/testRabbitMQServer.php at line 33. 
+[Nov/01/2020 | 09:10:35pm] Error: 8, Undefined offset: 3 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:35pm] Error: 8, Undefined offset: 3 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:36pm] Error: 8, Undefined offset: 4 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:36pm] Error: 8, Undefined offset: 4 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:37pm] Error: 8, Undefined offset: 5 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:37pm] Error: 8, Undefined offset: 5 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:38pm] Error: 8, Undefined offset: 6 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:38pm] Error: 8, Undefined offset: 6 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:39pm] Error: 8, Undefined offset: 7 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:39pm] Error: 8, Undefined offset: 7 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:40pm] Error: 8, Undefined offset: 8 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:40pm] Error: 8, Undefined offset: 8 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:41pm] Error: 8, Undefined offset: 9 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:41pm] Error: 8, Undefined offset: 9 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:43pm] Error: 8, Undefined offset: 10 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:43pm] Error: 8, Undefined offset: 10 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:46pm] Error: 8, Undefined offset: 11 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:46pm] Error: 8, Undefined offset: 11 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:48pm] Error: 8, Undefined offset: 12 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
+[Nov/01/2020 | 09:10:48pm] Error: 8, Undefined offset: 12 in /home/carloscaldero/spotifyDir/testRabbitMQClient.php at line 41. 
