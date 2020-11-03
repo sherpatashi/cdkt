@@ -1,0 +1,48 @@
+#!/usr/bin/php
+<?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+ini_set('display_startup_errors', 'On');
+
+session_start();
+
+include_once('testRabbitMQClient.php');
+
+set_error_handler("logErrors");
+
+$username = strtolower($_GET['username']);
+$password = strtolower($_GET['password']);
+
+
+if($username == '' || $password == '' || $username == null || $password == null){
+	echo "\nUsername or Password field left empty, refresh page and notify.";
+	header("location:../index.html?loginEmpty=blank");
+
+
+	$logText1 = " Login attempt failed due to null entry.\n";
+	logLogin($logText1);
+
+
+}
+
+$response = login($username, $password);
+
+if($response == true){
+	$_SESSION['username'] = $username;
+	# header REDIRECT TO HOMEPAGE
+
+	
+	$logText2 = "  Login attempt from User: $username | Login Successful.\n";
+	logLogin($logText2);
+}
+
+elseif($response == false){
+	echo "\nLogin Failed. Username & Password Combination Does Not Exist.";
+	# header REDIRECT TO FAILED LOGIN PAGE
+
+	$logText3 = " Login attempt from User: $username | Failed due to incorrect credentials.\n";
+	logLogin($logText3);
+}
+
+?>
