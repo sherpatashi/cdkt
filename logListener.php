@@ -22,7 +22,7 @@ function requestProcessor($request){
 	}
 
 switch ($request['type']){
-	case "log-error":
+	case "logErrors":
       		 return storeLogs($request['message'], "Errors");
 		break;
     	case "log-login":
