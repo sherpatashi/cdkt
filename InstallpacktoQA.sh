@@ -11,7 +11,7 @@ if [ ! -d "Package.v2" ]; then
 	echo " "
 	echo " "
 	sleep 1
-	sudo sshpass -p 'Orangerice' ssh tashidsherpa@25.68.236.97 "sh -c 'rm -rf /var/www/*'"
+	#sudo sshpass -p 'Orangerice' ssh tashidsherpa@25.68.236.97 "sh -c 'rm -rf /var/www/*'"
 	sudo sshpass -p 'Orangerice' scp -r  tashidsherpa@25.68.236.97:/var/www/html /home/deployment/Package.v2/
 	
 	echo " "
