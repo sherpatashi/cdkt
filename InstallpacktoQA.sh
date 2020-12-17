@@ -28,16 +28,16 @@ if [ ! -d "Package.v2" ]; then
 	sleep 2
 	echo  "************Now... Deploying Package.v2 to the QA Environment..************"
         echo " "
-	
         sleep 3
-
-    
 	sudo sshpass -p 'Orangerice' rsync -raz /home/deployment/Package.v2/Pv2.tar.gz tashidsherpa@25.68.236.97:/var/www
+	sudo sshpass -p 'Orangerice' ssh -t tashidsherpa@25.68.236.97 '. ~/.barshrc; cd /var/www; tar -xvzf Pv2.tar.gz'
+	sleep 1
+	clear
     	echo "************Package.v2 Deployed. Now...installing the Package.v2..************"
 	echo " "
-	sleep 4
+	sleep 2.5
 	echo "************Install Package.v2 Completed. Now...QA is Rebooting...***********"
-	sleep 3
+	sleep 2.5
 fi
 
 if [ -d "Package.v2" ]; then 
@@ -49,7 +49,7 @@ if [ -d "Package.v2" ]; then
 	sudo sshpass -p 'Orangerice' rsync -raz /home/deployment/Package.v2/Pv2.tar.gz tashidsherpa@25.68.236.97:/var/www
 	
 	sudo sshpass -p 'Orangerice' ssh -t tashidsherpa@25.68.236.97 '. ~/.barshrc; cd /var/www; tar -xvzf Pv2.tar.gz'
-	
+
 	sleep 1
 	clear
 	echo  "************Installing package.v2 in the QA Environment************"
