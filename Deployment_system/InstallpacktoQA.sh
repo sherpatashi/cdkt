@@ -12,7 +12,7 @@ if [ ! -d "Package.v2" ]; then
 	echo " "
 	sleep 1
 	#sudo sshpass -p 'Orangerice' ssh tashidsherpa@25.68.236.97 "sh -c 'rm -rf /var/www/*'"
-	sudo sshpass -p 'Orangerice' scp -r  tashidsherpa@25.68.236.97:/var/www/html /home/deployment/Package.v2/
+	sudo sshpass -p '8Saibaba' scp -r  divyap@25.57.23.231:/var/www/html /home/deployment/Package.v2/
 	
 	echo " "
 	sleep 2
@@ -20,17 +20,18 @@ if [ ! -d "Package.v2" ]; then
 	sleep 1
 	echo " "
 	echo "************Package.v2 Copy Complete.************"
-	echo " "
-	echo " "
-	echo "#####################################################################################################################################"
+#	echo " "
+#	echo " "
+#	echo "#####################################################################################################################################"
+
 	echo " "
 	echo " " 
 	sleep 2
 	echo  "************Now... Deploying Package.v2 to the QA Environment..************"
         echo " "
         sleep 3
-	sudo sshpass -p 'Orangerice' rsync -raz /home/deployment/Package.v2/Pv2.tar.gz tashidsherpa@25.68.236.97:/var/www
-	sudo sshpass -p 'Orangerice' ssh -t tashidsherpa@25.68.236.97 '. ~/.barshrc; cd /var/www; tar -xvzf Pv2.tar.gz'
+	sshpass -p '8Saibaba' rsync -raz /home/deployment/Package.v2/Pv2.tar.gz divyap@25.94.151.224:/var/www/
+	sudo sshpass -p '8Saibaba' ssh -t divyap@25.94.151.224 '. ~/.barshrc; cd /var/www; tar -xvzf Pv2.tar.gz'
 	sleep 1
 	clear
     	echo "************Package.v2 Deployed. Now...installing the Package.v2..************"
@@ -46,12 +47,15 @@ if [ -d "Package.v2" ]; then
 	echo "************Installing package.v2 in the QA Environment************"
 	echo " "
   	sleep 1
-	sudo sshpass -p 'Orangerice' rsync -raz /home/deployment/Package.v2/Pv2.tar.gz tashidsherpa@25.68.236.97:/var/www
+	sudo sshpass -p '8Saibaba' scp -r  /home/deployment/Package.v2/Pv2.tar.gz divyap@25.57.23.231:/var/www
+
+#	sudo sshpass -P '8Saibaba' rsync -raz /home/deployment/Package.v2/Pv2.tar.gz divyap@25.94.151.224:/var/www
 	
-	sudo sshpass -p 'Orangerice' ssh -t tashidsherpa@25.68.236.97 '. ~/.barshrc; cd /var/www; tar -xvzf Pv2.tar.gz'
+	sudo sshpass -P '8Saibaba' ssh -t divya@25.94.151.224 ' . ~/.barshrc; cd /var/www; tar -xvzf Pv2.tar.gz'
 
 	sleep 1
-	clear
+#	clear
+	echo " "
 	echo  "************Installing package.v2 in the QA Environment************"
 	echo " "
 	echo " "
